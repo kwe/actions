@@ -11,6 +11,9 @@ inputs:
   private_key:
     description: SSH private key to use to connect
     required: false
+  user:
+    description: username to use for login
+    required: true
 runs:
   using: docker
   image: Dockerfile
