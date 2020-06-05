@@ -35,4 +35,4 @@ if [ ${INPUT_HOST#"ssh://"} != "$INPUT_HOST" ]; then
 fi
 
 echo "Connecting to $INPUT_HOST..."
-docker --log-level debug --host "$INPUT_HOST" "$@" 2>&1
+ssh -A -tt -o 'StrictHostKeyChecking=no' -p ${PORT:-22} $USER@$INPUT_HOST "$*"
