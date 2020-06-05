@@ -1,0 +1,19 @@
+name: ssh
+author: Kevin Evans <kwevans@gmail.com>
+description: A GitHub Action that enables you to SSH into a remote host.
+inputs:
+  host:
+    description: host to connect to
+    required: true
+  public_key:
+    description: SSH public key of the server
+    required: false
+  private_key:
+    description: SSH private key to use to connect
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: droplet
+  color: blue
