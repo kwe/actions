@@ -35,4 +35,4 @@ if [ ${INPUT_HOST#"ssh://"} != "$INPUT_HOST" ]; then
 fi
 
 echo "Connecting to $INPUT_HOST..."
-ssh -A -tt -o 'StrictHostKeyChecking=no' -p ${PORT:-22} $USER@$INPUT_HOST "$*"
+ssh -A -tt -o 'StrictHostKeyChecking=no' -p ${PORT:-22} $INPUT_USER@$INPUT_HOST "$*"
