@@ -14,6 +14,9 @@ inputs:
   user:
     description: username to use for login
     required: true
+  port:
+    description: port to use for ssh
+    required: false
 runs:
   using: docker
   image: Dockerfile
