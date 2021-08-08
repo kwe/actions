@@ -22,4 +22,4 @@ ssh-keyscan -t rsa $INPUT_HOST >> "$SSH_PATH/known_hosts"
 
 echo "$INPUT_PORT"
 
-ssh -A -tt -o 'StrictHostKeyChecking=no' -p $INPUT_PORT ${INPUT_USER}@${INPUT_HOST} "$*"
+ssh -A -tt -o 'StrictHostKeyChecking=no' -p ${INPUT_PORT} ${INPUT_USER}@${INPUT_HOST} "$*"
